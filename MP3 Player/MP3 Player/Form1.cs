@@ -76,27 +76,11 @@ namespace MP3_Player
         {
             if (playList.SelectedIndex >= 0)
             {
-                // Obțineți numele playlist-ului selectat
-                string selectedPlaylistName = playList.SelectedItem.ToString();
+                // Ștergeți playlist-ul din MusicManager
+                manager.DeletePlaylist(playList.SelectedIndex);
 
-                // Căutați playlist-ul în MusicManager
-                Playlist selectedPlaylist = manager.GetPlaylistByName(selectedPlaylistName);
-
-                if (selectedPlaylist != null)
-                {
-                    // Ștergeți playlist-ul din MusicManager
-                    manager.DeletePlaylist(selectedPlaylist);
-
-                    // Ștergeți numele playlist-ului din listbox
-                    playList.Items.Remove(selectedPlaylistName);
-
-                    // Ștergeți melodiile afișate din listbox-ul de melodii
-                    //songsListBox.Items.Clear();
-                }
-                else
-                {
-                    MessageBox.Show("Playlist-ul nu a fost găsit.", "Eroare");
-                }
+                // Ștergeți numele playlist-ului din listbox
+                playList.Items.RemoveAt(playList.SelectedIndex);
             }
             else
             {

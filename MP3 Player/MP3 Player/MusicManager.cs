@@ -24,6 +24,8 @@ namespace MP3_Player
                 listbox.Items.Add(nume);
             }
         }
+
+        //Aceasta functie trebuie mutata
         public void listSongsName(ListBox listbox, int index)
         {
             foreach (Song song in playlists[index].Songs)
@@ -37,10 +39,9 @@ namespace MP3_Player
             Console.WriteLine($"Playlist '{playlist.Name}' added.");
         }
 
-        public void DeletePlaylist(Playlist playlist)
+        public void DeletePlaylist(int index)
         {
-            playlists.Remove(playlist);
-            Console.WriteLine($"Playlist '{playlist.Name}' deleted.");
+            playlists.RemoveAt(index);
         }
 
         public Playlist GetPlaylistByName(string nume)
