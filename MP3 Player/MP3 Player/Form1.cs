@@ -13,11 +13,19 @@ namespace MP3_Player
 {
     public partial class Form1 : Form
     {
-        List<string[]> path = new List<string[]>();
-
         private MusicManager manager = new MusicManager();
         private MusicPlayer musicPlayer = new MusicPlayer();
         List<Song> songs = new List<Song>();
+
+        // Pentru versuri
+        private string currentLyrics;
+        private int currentSong;
+
+
+        //creez o instanță a clasei Invoker și o utilizez
+        //pentru a salva și afișa versurile anterioare
+        private Invoker lyricsInvoker = new Invoker();
+
 
         public Form1()
         {
@@ -31,6 +39,13 @@ namespace MP3_Player
 
         }
 
+        //returnez textul din textbox
+        public string LyricsTextBox
+        {
+            get { return richTextBox1.Text; }
+        }
+
+
         // Daca un element a fost selectat din lista de melodii, atunci playerul
         // initializeaza urmatoarea melodie de redare cu melodia pe care tocmai
         // am selectat-o
@@ -39,6 +54,7 @@ namespace MP3_Player
             Song melodie = manager.GetPlaylistByIndex(playList.SelectedIndex).getSong(listBox.SelectedIndex);
             musicPlayer.SetSong(melodie);
             buttonStopPlay.Text = musicPlayer.PlayButtonText();
+            richTextBox1.Text = string.Empty;
         }
 
 
@@ -54,7 +70,38 @@ namespace MP3_Player
             }
         }
 
+        private void PreviousButton_Click(object sender, EventArgs e)
+        {
+            //am apasat pe buton
+            if (lyricsInvoker != null)
+            {
+                lyricsInvoker.Undo();
+                richTextBox1.Text = lyricsInvoker.GetCurrentLyrics();
+            }
+        }
 
+        private void loadLyrics(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(richTextBox1.Text) && (listBox.SelectedIndex != -1))
+            {
+                //richTextBox1.Text = string.Empty;
+                Lyrics lyrics = new Lyrics();
+                string selectedLyrics = lyrics.OpenFileDialogAndSaveLyrics();
+                richTextBox1.Text = selectedLyrics;
+                currentLyrics = richTextBox1.Text;
+                // Crearea comenzii și executarea acesteia
+                ICommand lyricsCommand = new LyricsCommand(currentLyrics, richTextBox1);
+                lyricsInvoker.ExecuteCommand(lyricsCommand, currentLyrics);
+            }
+            else if (!string.IsNullOrEmpty(richTextBox1.Text))
+            {
+                MessageBox.Show("Ati adaugat deja versuri pentru melodie.");
+            }
+            else if (listBox.SelectedIndex == -1)
+            {
+                MessageBox.Show("Pentru a adauga versuri trebuie sa selectati mai intai o melodie.");
+            }
+        }
         // La apasarea butonului Add Playlist se creaza un nou obiect de tip
         // playlist cu numele pe care il primeste din TextBox-ul "Nume Playlist"
         // care va fi inserat in lista de redare
@@ -157,6 +204,32 @@ namespace MP3_Player
         {
             musicPlayer.PlaySong();
             buttonStopPlay.Text = musicPlayer.PlayButtonText();
+        }
+
+        private void DeleteSongs(object sender, EventArgs e)
+        {
+            int selectedPlaylistIndex = playList.SelectedIndex;
+            int selectedSongIndex = listBox.SelectedIndex;
+
+            if (selectedPlaylistIndex >= 0 && selectedSongIndex >= 0)
+            {
+                Playlist selectedPlaylist = manager.GetPlaylistByIndex(selectedPlaylistIndex);
+                Song selectedSong = selectedPlaylist.getSong(selectedSongIndex);
+
+                if (selectedSong != null)
+                {
+                    manager.DeleteSong(selectedSong, selectedPlaylistIndex);
+                    listBox.Items.RemoveAt(selectedSongIndex);
+                }
+                else
+                {
+                    MessageBox.Show("Selectați un cântec pentru a șterge.", "Eroare");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selectați un playlist și un cântec pentru a șterge.", "Eroare");
+            }
         }
 
     }

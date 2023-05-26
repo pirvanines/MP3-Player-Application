@@ -1,0 +1,9 @@
+C:\Users\Hagni\Documents\GitHub\IP_team\DLL\Playlist\Playlist\bin\Debug\Playlist.dll
+C:\Users\Hagni\Documents\GitHub\IP_team\DLL\Playlist\Playlist\bin\Debug\Playlist.pdb
+C:\Users\Hagni\Documents\GitHub\IP_team\DLL\Playlist\Playlist\bin\Debug\Song.dll
+C:\Users\Hagni\Documents\GitHub\IP_team\DLL\Playlist\Playlist\bin\Debug\Song.pdb
+C:\Users\Hagni\Documents\GitHub\IP_team\DLL\Playlist\Playlist\obj\Debug\Playlist.csproj.AssemblyReference.cache
+C:\Users\Hagni\Documents\GitHub\IP_team\DLL\Playlist\Playlist\obj\Debug\Playlist.csproj.CoreCompileInputs.cache
+C:\Users\Hagni\Documents\GitHub\IP_team\DLL\Playlist\Playlist\obj\Debug\Playlist.csproj.CopyComplete
+C:\Users\Hagni\Documents\GitHub\IP_team\DLL\Playlist\Playlist\obj\Debug\Playlist.dll
+C:\Users\Hagni\Documents\GitHub\IP_team\DLL\Playlist\Playlist\obj\Debug\Playlist.pdb

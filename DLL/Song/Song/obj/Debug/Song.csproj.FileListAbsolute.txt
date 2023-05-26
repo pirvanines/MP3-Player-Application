@@ -1,0 +1,6 @@
+C:\Users\Hagni\Documents\GitHub\IP_team\DLL\Song\Song\bin\Debug\Song.dll
+C:\Users\Hagni\Documents\GitHub\IP_team\DLL\Song\Song\bin\Debug\Song.pdb
+C:\Users\Hagni\Documents\GitHub\IP_team\DLL\Song\Song\obj\Debug\Song.csproj.AssemblyReference.cache
+C:\Users\Hagni\Documents\GitHub\IP_team\DLL\Song\Song\obj\Debug\Song.csproj.CoreCompileInputs.cache
+C:\Users\Hagni\Documents\GitHub\IP_team\DLL\Song\Song\obj\Debug\Song.dll
+C:\Users\Hagni\Documents\GitHub\IP_team\DLL\Song\Song\obj\Debug\Song.pdb

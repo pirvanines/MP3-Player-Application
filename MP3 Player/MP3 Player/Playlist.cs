@@ -30,7 +30,7 @@ namespace MP3_Player
 
         public Song getSong(int index)
         {
-            if (index < _songs.Count)
+            if (index >= 0 && index < _songs.Count)
                 return _songs[index];
             return null;
         }

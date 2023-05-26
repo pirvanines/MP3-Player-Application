@@ -115,6 +115,7 @@ namespace MP3_Player
             this.button2.TabIndex = 21;
             this.button2.Text = "Delete Songs";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.DeleteSongs);
             // 
             // listBox
             // 
@@ -185,6 +186,7 @@ namespace MP3_Player
             this.button4.TabIndex = 6;
             this.button4.Text = "prev";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.PreviousButton_Click);
             // 
             // groupBox1
             // 
@@ -208,6 +210,7 @@ namespace MP3_Player
             this.button7.TabIndex = 23;
             this.button7.Text = "Add lyrics";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.loadLyrics);
             // 
             // numePlaylist
             // 

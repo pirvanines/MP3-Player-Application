@@ -95,8 +95,6 @@ namespace MP3_Player
                 Console.WriteLine($"Invalid playlist index: {index}");
             }
             
-        }
-
-        
+        } 
     }
 }
