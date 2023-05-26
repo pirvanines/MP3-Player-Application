@@ -31,6 +31,9 @@ namespace MP3_Player
 
         }
 
+        // Daca un element a fost selectat din lista de melodii, atunci playerul
+        // initializeaza urmatoarea melodie de redare cu melodia pe care tocmai
+        // am selectat-o
         private void ListBoxSong_SelectedIndexChanged(object sender, EventArgs e)
         {
             Song melodie = manager.GetPlaylistByIndex(playList.SelectedIndex).getSong(listBox.SelectedIndex);
@@ -38,6 +41,9 @@ namespace MP3_Player
             buttonStopPlay.Text = musicPlayer.PlayButtonText();
         }
 
+
+        // Daca playlistul curent a fost schimbat atunci se afiseaza in ListBox melodiile 
+        // corespunzatoare playlistului curent
         private void ListBoxPlaylist_SelectedIndexChanged(object sender, EventArgs e)
         {
             addSongs.Enabled = true;
@@ -48,6 +54,10 @@ namespace MP3_Player
             }
         }
 
+
+        // La apasarea butonului Add Playlist se creaza un nou obiect de tip
+        // playlist cu numele pe care il primeste din TextBox-ul "Nume Playlist"
+        // care va fi inserat in lista de redare
         private void addPlaylist(object sender, EventArgs e)
         {
             string playlistName = numePlaylist.Text;
@@ -72,6 +82,9 @@ namespace MP3_Player
 
         }
 
+
+        // Daca exista un playlist selectat atunci la apasarea butonului Delete
+        // se sterge din lista de redare elementul cu indexul aferent
         private void DeletePlaylist(object sender, EventArgs e)
         {
             if (playList.SelectedIndex >= 0)
@@ -88,26 +101,31 @@ namespace MP3_Player
             }
         }
 
+
+        // Adaugarea unor fisiere de tip .mp3 in playlistul selectat curent 
         [STAThread]
         private void AddSongToPlaylist(object sender, EventArgs e)
         {
+            // Se deschide o fereastra in care putem naviga pentru a selecta fisierele
+            // pe care vrem sa le importam
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Multiselect = true;
 
+
+            // Adaugam noi obiecte <Song> in playlist, obiecte initializate cu 
+            // campurile file si path ale fisierelor selectate din fereastra
+            // proaspat deschisa; daca fereastra s-a deschis:
             if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                //files = openFileDialog.SafeFileNames;
-                //paths = openFileDialog.FileNames;
-
-
+                // Initializam campul file al obiectelor de tip <Song>
                 foreach (String file in openFileDialog.SafeFileNames)
                 {
                     Song song = new Song();
                     song.Name = file;
                     songs.Add(song);
-
                 }
 
+                // Initializam campul path al obiectelor de tip <Song>
                 int j = 0;
                 foreach (String path in openFileDialog.FileNames)
                 {
@@ -115,20 +133,26 @@ namespace MP3_Player
                     j++;
                 }
 
-                for (int i = 0; i < songs.Count; i++)
-                {
-                    listBox.Items.Add(songs[i].Name);
-                }
-
+                // Adaugam obiectele <Song> create anterior in playlistul curent
                 foreach (Song song in songs)
                 {
                     manager.AddSong(song, playList.SelectedIndex);
                 }
 
+                // Afisam obiectele <Song> in ListBox si curatam lista pentru
+                // urmatoarea incarcare
+                for (int i = 0; i < songs.Count; i++)
+                {
+                    listBox.Items.Add(songs[i].Name);
+                }
                 songs.Clear();
             }
         }
 
+
+        // La apasarea butonului Play se apeleaza state-machineul care
+        // decide starea butonului si intoarce un text care va fi afisat pe buton
+        // in functie de aceasta stare curenta
         private void playSong(object sender, EventArgs e)
         {
             musicPlayer.PlaySong();
