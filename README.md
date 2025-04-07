@@ -1,73 +1,55 @@
-# IP
-Proiect la IP
-!!!ATENTIE!!!
-Acest fisier e la un status de start. Oricine poate adauga
-informatii utile cu privire la proiect, idei sau sectiuni
-utile.
+# Team-Based Software Engineering Project - MP3 Player
 
+## Authors
+- **Ines-Iuliana Pirvan** - Software Engineer
+- **Roxana-Maria Apostol** - Software Developer
+- **Raluca-Daniela Baciu** - Software Developer
+- **Florina-Dumitrita Nistor** - Technical Writer
 
+## Project Goal
+### Functionality
+- Playing .mp3 files
+- Add, Delete Songs
+- Creating, Deleting playlists
+- Play, Pause, Stop, Next, Prev buttons
+- Add Lyrics
+- Help assistence 
+- Reading, editing, and displaying information from ID3 tags (song metadata) - *not implemented*
 
-*Current State*
--putem adauga fisiere intr-o lista (nu se salveaza lista
-dupa inchiderea aplicatiei);
--putem reda o melodie selectata;
+### Requirements
+- Use Case Diagram
+- System specification document (a user tutorial - describes the functionality of each button and the purpose of each section added to the interface with very few implementation details; emphasis on the black box concept) - useful: page 53, course 3, Software Engineering 
+- To use design patterns: Commander and Facade
+- Add relevant comments
+- To handle exceptions
+- To implement and add our own DLLs
+- The source code must include a header with information about the author and the functionality they have added for each file
+- A list of what each person has implemented - *coding*
 
+## Implementation Approach
+### Initial State
+- Add files to a playlist (saved statically - until the program is closed)
+- Play a selected song
 
+### Next Steps
+- Define the design patterns to be used (possibly the Command and Facade patterns)
+- Create a UML diagram to clarify task division and start the implementation process
 
+### Main Tasks
+- Document the application implementation approach, then create the UML diagram
+- Implement the modules according to the UML diagram
+- Create an attractive user interface
+- Create a help menu using HelpNDoc
+- Implement the test class and the test cases
+- Add self implemented DLL modules
+- Write the documentation
 
+## Team member contributions
+- **Ines-Iuliana Pirvan** - application architecture, team management, UI, **Play/Pause Song** functionality, DLLs, Unit Testing
+- **Roxana-Maria Apostol** - **Next/Prev Song** functionality, **Add Lyrics** functionality and synchronization between the two using Command pattern, **Volume Controller**
+- **Raluca-Daniela Baciu** - **Add/Delete Playlist** functionality, **Add/Delete Song** functionality, **Store Song and Playlist** classes, exceptions handling
+- **Florina-Dumitrita Nistor** - Facade pattern between UI and core logic, **Help** menu with HelpNDoc, Use Case Diagram, Documentation
 
-*Next Steps*
--de stabilit design patternul folosit (posibil commander)
--de facut o diagrama UML ca sa stim cum impartim sarcinile 
-de lucru si sa ne putem apuca de implementat;
-
-
-
-
-
-*Main Tasks*
--redactarea a tot ce tine de documentatie;
--crearea interfetei sa fie cat mai atractiva;
--crearea si deschiderea bazei de date in proiect;
--documentarea cu privire la ce implica implementarea unui 
-astfel de cod si, apoi, crearea diagramei UML;
--implementarea modulelor conform diagramei UML;
-
-
-
-
-
-***Functionalitati pe care ar trebui sa le implementam:
-->redarea fisierelor de tip .mp3
-->Play, Pause, Stop, Next, Prev
-->Crearea unor liste de redare (legatura cu baza de date)
-->Citirea, editarea si afisarea informatiilor din tagurile 
-ID3 ("metadate" despre melodie)
-
-
-
-***Puncte care trebuie atinse in proiect:
-->Document cu analiza sistemului (descrie ce face aplicatia 
-noastra din punctul de vedere al unui utilizator - ce si-ar 
-dori clientul sa aiba aplicatia);
-
-->Document cu specificarea sistemului (ca un tutorial de 
-utilizare a aplicatiei - descrie ce face fiecare buton si 
-utilitatea fiecarei sectiuni adaugate in interfata cu foarte 
-putine detalii de implementare - accentul pus pe ideea de 
-black box);
-(util: pag 53, curs 3)
-
-->Utilizarea unui sablon de proiectare: commander ?
-
-->De adaugat la final comentarii care descriu ce face fiecare 
-bucata de cod;
-
-->De tratat exceptiile;
-
-->Fiecare modul trebuie sa fie intr-un DDL;
-
-->Fisierele trebuie sa contina cate un antet cu informatii 
-despre autor si functionalitatea pe care acesta a adaugat-o;
-
-->Lista cu ce a facut fiecare.
+## Disclaimer
+- No changes have been made to the source code since the last team meeting in May 2023
+- The README.md has been translated from Romanian in English, and formated properly
