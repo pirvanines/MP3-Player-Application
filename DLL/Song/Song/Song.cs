@@ -10,6 +10,10 @@ public class Song
     private string _name;
     private string _filePath;
 
+    public Song()
+    {
+
+    }
 
     public string Name
     {

@@ -44,5 +44,10 @@ namespace MP3_Player
         {
             _songs.Remove(song);
         }
+
+        public int SongsNumber()
+        {
+            return _songs.Count;
+        }
     }
 }

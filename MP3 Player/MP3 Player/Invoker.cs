@@ -1,4 +1,19 @@
-﻿using System;
+﻿/**************************************************************************
+ *                                                                        *
+ *  File:        Invoker.cs                                             v *
+ *  Copyright:   (c) 2023, Apostol Roxana-Maria                           *
+ *  E-mail:      roxana-maria.apostol@student.tuiasi.ro                   *
+ *  Description: Descrie realizarea sablonulului de proiectare COMANDA.   *
+ *                                                                        *
+ *  This program is free software; you can redistribute it and/or modify  *
+ *  it under the terms of the GNU General Public License as published by  *
+ *  the Free Software Foundation. This program is distributed in the      *
+ *  hope that it will be useful, but WITHOUT ANY WARRANTY; without even   *
+ *  the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR   *
+ *  PURPOSE. See the GNU General Public License for more details.         *
+ *                                                                        *
+ **************************************************************************/
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Linq;
@@ -41,17 +56,24 @@ namespace MP3_Player
 
         public string GetCurrentLyrics()
         {
-            if (commandHistory.Count > 0)
+            try
             {
-                ICommand previousCommand = commandHistory.Peek();
-                // Returnez versurile din comanda anterioară
-                if (previousCommand is LyricsCommand lyricsCommand)
+                if (commandHistory.Count > 0)
                 {
-                    return lyricsCommand.GetCurrentLyrics();
+                    ICommand previousCommand = commandHistory.Peek();
+                    if (previousCommand is LyricsCommand lyricsCommand)
+                    {
+                        return lyricsCommand.GetCurrentLyrics();
+                    }
                 }
+
+                throw new Exception("Nu am melodii anterioare.");
             }
-            MessageBox.Show("Nu am melodii anterioare.");
-            return string.Empty;
+            catch (Exception ex)
+            {
+                MessageBox.Show("A apărut o excepție: " + ex.Message);
+                return string.Empty;
+            }
         }
     }
 }
