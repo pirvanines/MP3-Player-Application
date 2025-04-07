@@ -52,4 +52,4 @@
 
 ## Disclaimer
 - No changes have been made to the source code since the last team meeting in May 2023
-- The README.md has been translated from Romanian in English, and formated properly
+- The README.md has been translated from Romanian to English, and formated properly
