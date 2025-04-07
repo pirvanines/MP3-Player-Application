@@ -47,6 +47,7 @@ namespace MP3_Player
             this.button7 = new System.Windows.Forms.Button();
             this.numePlaylist = new System.Windows.Forms.TextBox();
             this.Nume = new System.Windows.Forms.Label();
+            this.Help = new System.Windows.Forms.Button();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
@@ -115,6 +116,7 @@ namespace MP3_Player
             this.button2.TabIndex = 21;
             this.button2.Text = "Delete Songs";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.DeleteSongs);
             // 
             // listBox
             // 
@@ -159,6 +161,7 @@ namespace MP3_Player
             this.button3.TabIndex = 5;
             this.button3.Text = "next";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.NextSong);
             // 
             // buttonStopPlay
             // 
@@ -168,7 +171,7 @@ namespace MP3_Player
             this.buttonStopPlay.TabIndex = 4;
             this.buttonStopPlay.Text = "Play";
             this.buttonStopPlay.UseVisualStyleBackColor = true;
-            this.buttonStopPlay.Click += new System.EventHandler(this.playSong);
+            this.buttonStopPlay.Click += new System.EventHandler(this.PlaySong);
             // 
             // progressBar1
             // 
@@ -185,6 +188,7 @@ namespace MP3_Player
             this.button4.TabIndex = 6;
             this.button4.Text = "prev";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.PreviousButton_Click);
             // 
             // groupBox1
             // 
@@ -208,6 +212,7 @@ namespace MP3_Player
             this.button7.TabIndex = 23;
             this.button7.Text = "Add lyrics";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.loadLyrics);
             // 
             // numePlaylist
             // 
@@ -227,11 +232,23 @@ namespace MP3_Player
             this.Nume.TabIndex = 25;
             this.Nume.Text = "Nume Playlist";
             // 
+            // Help
+            // 
+            this.Help.Location = new System.Drawing.Point(694, 589);
+            this.Help.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Help.Name = "Help";
+            this.Help.Size = new System.Drawing.Size(112, 35);
+            this.Help.TabIndex = 26;
+            this.Help.Text = "Help";
+            this.Help.UseVisualStyleBackColor = true;
+            this.Help.Click += new System.EventHandler(this.HelpButton);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(874, 686);
+            this.Controls.Add(this.Help);
             this.Controls.Add(this.Nume);
             this.Controls.Add(this.numePlaylist);
             this.Controls.Add(this.button7);
@@ -272,6 +289,7 @@ namespace MP3_Player
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.TextBox numePlaylist;
         private System.Windows.Forms.Label Nume;
+        private System.Windows.Forms.Button Help;
     }
 }
 

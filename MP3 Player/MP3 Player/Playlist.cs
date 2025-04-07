@@ -1,4 +1,20 @@
-﻿using System;
+﻿/**************************************************************************
+ *                                                                        *
+ *  File:        Playlist.cs                                              *
+ *  Copyright:   (c) 2023, Baciu Raluca-Daniela                           *
+ *  E-mail:      raluca-daniela.baciu@student.tuiasi.ro                   *
+ *  Description:   This file describes the Playlist Model.                *
+ *                                                                        *
+ *  This program is free software; you can redistribute it and/or modify  *
+ *  it under the terms of the GNU General Public License as published by  *
+ *  the Free Software Foundation. This program is distributed in the      *
+ *  hope that it will be useful, but WITHOUT ANY WARRANTY; without even   *
+ *  the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR   *
+ *  PURPOSE. See the GNU General Public License for more details.         *
+ *                                                                        *
+ **************************************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -30,7 +46,7 @@ namespace MP3_Player
 
         public Song getSong(int index)
         {
-            if (index < _songs.Count)
+            if (index >= 0 && index < _songs.Count)
                 return _songs[index];
             return null;
         }
@@ -43,6 +59,11 @@ namespace MP3_Player
         public void Remove(Song song)
         {
             _songs.Remove(song);
+        }
+
+        public int SongsNumber()
+        {
+            return _songs.Count;
         }
     }
 }

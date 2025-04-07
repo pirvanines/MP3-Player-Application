@@ -1,24 +1,38 @@
-﻿using System;
+﻿/**************************************************************************
+ *                                                                        *
+ *  File:        Form1.cs                                                 *
+ *  Copyright:   (c) 2023, Pîrvan Ines-Iuliana                            *
+ *  E-mail:      ines-iuliana.pirvan@student.tuiasi.ro                    *
+ *  Website:                                                              *
+ *  Description: Interfata MP3Player-ului                                 *
+ *                                                                        *
+ *  This program is free software; you can redistribute it and/or modify  *
+ *  it under the terms of the GNU General Public License as published by  *
+ *  the Free Software Foundation. This program is distributed in the      *
+ *  hope that it will be useful, but WITHOUT ANY WARRANTY; without even   *
+ *  the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR   *
+ *  PURPOSE. See the GNU General Public License for more details.         *
+ *                                                                        *
+ **************************************************************************/
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using NAudio.Wave;
+using Mp3_Player;
+
 
 namespace MP3_Player
 {
     public partial class Form1 : Form
     {
-        List<string[]> path = new List<string[]>();
-
         private MusicManager manager = new MusicManager();
         private MusicPlayer musicPlayer = new MusicPlayer();
         List<Song> songs = new List<Song>();
-
+        private MP3PlayerControl Mp3PlayerCtrl = new MP3PlayerControl();
+   
+        //creez o instanță a clasei Invoker și o utilizez
+        //pentru a salva și afișa versurile anterioare
+        private Invoker lyricsInvoker = new Invoker();
+        
         public Form1()
         {
             InitializeComponent();
@@ -30,126 +44,102 @@ namespace MP3_Player
         {
 
         }
-
-        private void ListBoxSong_SelectedIndexChanged(object sender, EventArgs e)
+        // Getter al continutului obiectului <richTextBox>
+        public string LyricsTextBox
         {
-            Song melodie = manager.GetPlaylistByIndex(playList.SelectedIndex).getSong(listBox.SelectedIndex);
-            musicPlayer.SetSong(melodie);
-            buttonStopPlay.Text = musicPlayer.PlayButtonText();
+            get { return richTextBox1.Text; }
         }
 
+        // Event ce semnaleaza schimbarea melodiei ce urmeaza a fi redate
+        private void ListBoxSong_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Mp3PlayerCtrl.SelectSongToPlay(listBox.SelectedIndex, playList.SelectedIndex);
+            richTextBox1.Text = string.Empty;
+        }
+
+        // Event ce semnaleaza schimbarea playlistului curent
         private void ListBoxPlaylist_SelectedIndexChanged(object sender, EventArgs e)
         {
             addSongs.Enabled = true;
-            if (playList.SelectedIndex != -1)
+            Mp3PlayerCtrl.ListSongsFromPlaylist(playList.SelectedIndex, listBox);
+        }
+
+        // Event ce semnaleaza trecerea la melodia anterioara
+        // Momentan poate sa redea doar versurile melodiei anterioare
+        // fara sa redea si melodia (mai e nevoie de un obiect comanda)
+        private void PreviousButton_Click(object sender, EventArgs e)
+        {
+            if (lyricsInvoker != null)
             {
-                listBox.Items.Clear();
-                manager.listSongsName(listBox, playList.SelectedIndex);
+                lyricsInvoker.Undo();
+                richTextBox1.Text = lyricsInvoker.GetCurrentLyrics();
+
+                /*int currentIndexP = playList.SelectedIndex;
+                int currentIndexS = listBox.SelectedIndex;
+                listBox.SelectedIndex = Mp3PlayerCtrl.PrevSong(currentIndexP, currentIndexS);
+                buttonStopPlay.Text = Mp3PlayerCtrl.PlaySong();*/
             }
         }
 
+        // Event pentru incarcarea versurilor in <RichBox>
+        private void loadLyrics(object sender, EventArgs e)
+        {
+            Mp3PlayerCtrl.LoadLyrics(richTextBox1, listBox, lyricsInvoker);
+        }
+        
+        // Event de adaugare a unei noi liste de redare 
         private void addPlaylist(object sender, EventArgs e)
         {
-            string playlistName = numePlaylist.Text;
-
-            // Verificați dacă numele playlist-ului nu este gol
-            if (!string.IsNullOrWhiteSpace(playlistName))
-            {
-                // Creați un nou playlist și adăugați-l în MusicManager
-                Playlist newPlaylist = new Playlist(playlistName);
-                manager.AddPlaylist(newPlaylist);
-
-                // Adăugați numele playlist-ului în listbox
-                playList.Items.Add(playlistName);
-
-                // Goliți caseta de text pentru numele playlist-ului
-                numePlaylist.Text = string.Empty;
-            }
-            else
-            {
-                MessageBox.Show("Introduceți un nume valid pentru playlist.", "Eroare");
-            }
-
+            Mp3PlayerCtrl.AddPlaylist(playList, numePlaylist);
         }
 
+        // Event de stergere a unui playlist selectat din <ListBox>
         private void DeletePlaylist(object sender, EventArgs e)
         {
-            if (playList.SelectedIndex >= 0)
-            {
-                // Obțineți numele playlist-ului selectat
-                string selectedPlaylistName = playList.SelectedItem.ToString();
-
-                // Căutați playlist-ul în MusicManager
-                Playlist selectedPlaylist = manager.GetPlaylistByName(selectedPlaylistName);
-
-                if (selectedPlaylist != null)
-                {
-                    // Ștergeți playlist-ul din MusicManager
-                    manager.DeletePlaylist(selectedPlaylist);
-
-                    // Ștergeți numele playlist-ului din listbox
-                    playList.Items.Remove(selectedPlaylistName);
-
-                    // Ștergeți melodiile afișate din listbox-ul de melodii
-                    //songsListBox.Items.Clear();
-                }
-                else
-                {
-                    MessageBox.Show("Playlist-ul nu a fost găsit.", "Eroare");
-                }
-            }
-            else
-            {
-                MessageBox.Show("Selectați un playlist pentru a șterge.", "Eroare");
-            }
+            Mp3PlayerCtrl.DeletePlaylist(playList.SelectedIndex, playList);
         }
 
+        // Event ce declanseaza adaugarea unor melodii in playlistul 
+        // selectat in <ListBox>
         [STAThread]
         private void AddSongToPlaylist(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Multiselect = true;
-
-            if (openFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                //files = openFileDialog.SafeFileNames;
-                //paths = openFileDialog.FileNames;
-
-
-                foreach (String file in openFileDialog.SafeFileNames)
-                {
-                    Song song = new Song();
-                    song.Name = file;
-                    songs.Add(song);
-
-                }
-
-                int j = 0;
-                foreach (String path in openFileDialog.FileNames)
-                {
-                    songs[j].FilePath = path;
-                    j++;
-                }
-
-                for (int i = 0; i < songs.Count; i++)
-                {
-                    listBox.Items.Add(songs[i].Name);
-                }
-
-                foreach (Song song in songs)
-                {
-                    manager.AddSong(song, playList.SelectedIndex);
-                }
-
-                songs.Clear();
-            }
+            Mp3PlayerCtrl.AddSongsToPlaylist(playList.SelectedIndex, listBox);
         }
 
-        private void playSong(object sender, EventArgs e)
+        // Event ce declanseaza redarea/pauza unei melodii
+        private void PlaySong(object sender, EventArgs e)
         {
-            musicPlayer.PlaySong();
-            buttonStopPlay.Text = musicPlayer.PlayButtonText();
+            buttonStopPlay.Text = Mp3PlayerCtrl.PlaySong();
         }
 
+        // Event ce declanseaza stergerea unei melodii
+        private void DeleteSongs(object sender, EventArgs e)
+        {
+            Mp3PlayerCtrl.DeleteSong(playList.SelectedIndex, listBox.SelectedIndex, listBox);
+        }
+
+        // Event ce extrage valoarea din <TrackBar>, converteste
+        // valoarea in intervalul [0,1] si o seteaza obiectului de tip <MusicPlayer>
+        private void Volume(object sender, EventArgs e)
+        {
+            int volume = trackBar2.Value;
+            float volumeNormalized = volume / 100f;
+            musicPlayer.SetVolume(volumeNormalized);
+        }
+
+        // Event pentru deschiderea ferestrei Help
+        private void HelpButton(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("MP3Player.chm");
+        }
+
+        private void NextSong(object sender, EventArgs e)
+        {
+            int currentIndexP = playList.SelectedIndex;
+            int currentIndexS = listBox.SelectedIndex;
+            listBox.SelectedIndex = Mp3PlayerCtrl.NextSong(currentIndexP, currentIndexS);
+            buttonStopPlay.Text = Mp3PlayerCtrl.PlaySong();
+        }
     }
 }

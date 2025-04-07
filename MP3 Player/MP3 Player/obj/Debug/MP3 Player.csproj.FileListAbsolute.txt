@@ -147,3 +147,133 @@ C:\Users\Hagni\Documents\GitHub\IP\IP\MP3 Player\MP3 Player\obj\Debug\MP3 Player
 C:\Users\Hagni\Documents\GitHub\IP\IP\MP3 Player\MP3 Player\obj\Debug\MP3 Player.csproj.CopyComplete
 C:\Users\Hagni\Documents\GitHub\IP\IP\MP3 Player\MP3 Player\obj\Debug\MP3 Player.exe
 C:\Users\Hagni\Documents\GitHub\IP\IP\MP3 Player\MP3 Player\obj\Debug\MP3 Player.pdb
+C:\Users\Hagni\Documents\GitHub\IP_team\MP3 Player\MP3 Player\bin\Debug\MP3 Player.exe.config
+C:\Users\Hagni\Documents\GitHub\IP_team\MP3 Player\MP3 Player\bin\Debug\MP3 Player.exe
+C:\Users\Hagni\Documents\GitHub\IP_team\MP3 Player\MP3 Player\bin\Debug\MP3 Player.pdb
+C:\Users\Hagni\Documents\GitHub\IP_team\MP3 Player\MP3 Player\bin\Debug\Microsoft.Win32.Registry.dll
+C:\Users\Hagni\Documents\GitHub\IP_team\MP3 Player\MP3 Player\bin\Debug\NAudio.Asio.dll
+C:\Users\Hagni\Documents\GitHub\IP_team\MP3 Player\MP3 Player\bin\Debug\NAudio.Core.dll
+C:\Users\Hagni\Documents\GitHub\IP_team\MP3 Player\MP3 Player\bin\Debug\NAudio.dll
+C:\Users\Hagni\Documents\GitHub\IP_team\MP3 Player\MP3 Player\bin\Debug\NAudio.Midi.dll
+C:\Users\Hagni\Documents\GitHub\IP_team\MP3 Player\MP3 Player\bin\Debug\NAudio.Wasapi.dll
+C:\Users\Hagni\Documents\GitHub\IP_team\MP3 Player\MP3 Player\bin\Debug\NAudio.WinForms.dll
+C:\Users\Hagni\Documents\GitHub\IP_team\MP3 Player\MP3 Player\bin\Debug\NAudio.WinMM.dll
+C:\Users\Hagni\Documents\GitHub\IP_team\MP3 Player\MP3 Player\bin\Debug\Song.dll
+C:\Users\Hagni\Documents\GitHub\IP_team\MP3 Player\MP3 Player\bin\Debug\System.Security.AccessControl.dll
+C:\Users\Hagni\Documents\GitHub\IP_team\MP3 Player\MP3 Player\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\Hagni\Documents\GitHub\IP_team\MP3 Player\MP3 Player\bin\Debug\Microsoft.Win32.Registry.xml
+C:\Users\Hagni\Documents\GitHub\IP_team\MP3 Player\MP3 Player\bin\Debug\NAudio.xml
+C:\Users\Hagni\Documents\GitHub\IP_team\MP3 Player\MP3 Player\bin\Debug\Song.pdb
+C:\Users\Hagni\Documents\GitHub\IP_team\MP3 Player\MP3 Player\bin\Debug\System.Security.AccessControl.xml
+C:\Users\Hagni\Documents\GitHub\IP_team\MP3 Player\MP3 Player\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\Hagni\Documents\GitHub\IP_team\MP3 Player\MP3 Player\bin\Debug\Interop.WMPLib.dll
+C:\Users\Hagni\Documents\GitHub\IP_team\MP3 Player\MP3 Player\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Hagni\Documents\GitHub\IP_team\MP3 Player\MP3 Player\obj\Debug\MP3 Player.csproj.AssemblyReference.cache
+C:\Users\Hagni\Documents\GitHub\IP_team\MP3 Player\MP3 Player\obj\Debug\Interop.WMPLib.dll
+C:\Users\Hagni\Documents\GitHub\IP_team\MP3 Player\MP3 Player\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Hagni\Documents\GitHub\IP_team\MP3 Player\MP3 Player\obj\Debug\MP3 Player.csproj.ResolveComReference.cache
+C:\Users\Hagni\Documents\GitHub\IP_team\MP3 Player\MP3 Player\obj\Debug\MP3_Player.Form1.resources
+C:\Users\Hagni\Documents\GitHub\IP_team\MP3 Player\MP3 Player\obj\Debug\MP3_Player.Properties.Resources.resources
+C:\Users\Hagni\Documents\GitHub\IP_team\MP3 Player\MP3 Player\obj\Debug\MP3 Player.csproj.GenerateResource.cache
+C:\Users\Hagni\Documents\GitHub\IP_team\MP3 Player\MP3 Player\obj\Debug\MP3 Player.csproj.CoreCompileInputs.cache
+C:\Users\Hagni\Documents\GitHub\IP_team\MP3 Player\MP3 Player\obj\Debug\MP3 Player.csproj.CopyComplete
+C:\Users\Hagni\Documents\GitHub\IP_team\MP3 Player\MP3 Player\obj\Debug\MP3 Player.exe
+C:\Users\Hagni\Documents\GitHub\IP_team\MP3 Player\MP3 Player\obj\Debug\MP3 Player.pdb
+C:\Users\Hagni\Documents\GitHub\IP_team\MP3 Player\MP3 Player\bin\Debug\Playlist.dll
+C:\Users\Hagni\Documents\GitHub\IP_team\MP3 Player\MP3 Player\bin\Debug\Playlist.pdb
+C:\Users\acer\Downloads\IP_team\IP_team\MP3 Player\MP3 Player\bin\Debug\MP3 Player.exe.config
+C:\Users\acer\Downloads\IP_team\IP_team\MP3 Player\MP3 Player\bin\Debug\MP3 Player.exe
+C:\Users\acer\Downloads\IP_team\IP_team\MP3 Player\MP3 Player\bin\Debug\MP3 Player.pdb
+C:\Users\acer\Downloads\IP_team\IP_team\MP3 Player\MP3 Player\bin\Debug\Microsoft.Win32.Registry.dll
+C:\Users\acer\Downloads\IP_team\IP_team\MP3 Player\MP3 Player\bin\Debug\NAudio.Asio.dll
+C:\Users\acer\Downloads\IP_team\IP_team\MP3 Player\MP3 Player\bin\Debug\NAudio.Core.dll
+C:\Users\acer\Downloads\IP_team\IP_team\MP3 Player\MP3 Player\bin\Debug\NAudio.dll
+C:\Users\acer\Downloads\IP_team\IP_team\MP3 Player\MP3 Player\bin\Debug\NAudio.Midi.dll
+C:\Users\acer\Downloads\IP_team\IP_team\MP3 Player\MP3 Player\bin\Debug\NAudio.Wasapi.dll
+C:\Users\acer\Downloads\IP_team\IP_team\MP3 Player\MP3 Player\bin\Debug\NAudio.WinForms.dll
+C:\Users\acer\Downloads\IP_team\IP_team\MP3 Player\MP3 Player\bin\Debug\NAudio.WinMM.dll
+C:\Users\acer\Downloads\IP_team\IP_team\MP3 Player\MP3 Player\bin\Debug\Playlist.dll
+C:\Users\acer\Downloads\IP_team\IP_team\MP3 Player\MP3 Player\bin\Debug\Song.dll
+C:\Users\acer\Downloads\IP_team\IP_team\MP3 Player\MP3 Player\bin\Debug\System.Security.AccessControl.dll
+C:\Users\acer\Downloads\IP_team\IP_team\MP3 Player\MP3 Player\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\acer\Downloads\IP_team\IP_team\MP3 Player\MP3 Player\bin\Debug\Microsoft.Win32.Registry.xml
+C:\Users\acer\Downloads\IP_team\IP_team\MP3 Player\MP3 Player\bin\Debug\NAudio.xml
+C:\Users\acer\Downloads\IP_team\IP_team\MP3 Player\MP3 Player\bin\Debug\Playlist.pdb
+C:\Users\acer\Downloads\IP_team\IP_team\MP3 Player\MP3 Player\bin\Debug\Song.pdb
+C:\Users\acer\Downloads\IP_team\IP_team\MP3 Player\MP3 Player\bin\Debug\System.Security.AccessControl.xml
+C:\Users\acer\Downloads\IP_team\IP_team\MP3 Player\MP3 Player\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\acer\Downloads\IP_team\IP_team\MP3 Player\MP3 Player\bin\Debug\Interop.WMPLib.dll
+C:\Users\acer\Downloads\IP_team\IP_team\MP3 Player\MP3 Player\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\acer\Downloads\IP_team\IP_team\MP3 Player\MP3 Player\obj\Debug\MP3 Player.csproj.AssemblyReference.cache
+C:\Users\acer\Downloads\IP_team\IP_team\MP3 Player\MP3 Player\obj\Debug\Interop.WMPLib.dll
+C:\Users\acer\Downloads\IP_team\IP_team\MP3 Player\MP3 Player\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\acer\Downloads\IP_team\IP_team\MP3 Player\MP3 Player\obj\Debug\MP3 Player.csproj.ResolveComReference.cache
+C:\Users\acer\Downloads\IP_team\IP_team\MP3 Player\MP3 Player\obj\Debug\MP3_Player.Form1.resources
+C:\Users\acer\Downloads\IP_team\IP_team\MP3 Player\MP3 Player\obj\Debug\MP3_Player.Properties.Resources.resources
+C:\Users\acer\Downloads\IP_team\IP_team\MP3 Player\MP3 Player\obj\Debug\MP3 Player.csproj.GenerateResource.cache
+C:\Users\acer\Downloads\IP_team\IP_team\MP3 Player\MP3 Player\obj\Debug\MP3 Player.csproj.CoreCompileInputs.cache
+C:\Users\acer\Downloads\IP_team\IP_team\MP3 Player\MP3 Player\obj\Debug\MP3 Player.exe
+C:\Users\acer\Downloads\IP_team\IP_team\MP3 Player\MP3 Player\obj\Debug\MP3 Player.pdb
+C:\Users\user\Desktop\IP_team\MP3 Player\MP3 Player\bin\Debug\MP3 Player.exe.config
+C:\Users\user\Desktop\IP_team\MP3 Player\MP3 Player\bin\Debug\MP3 Player.exe
+C:\Users\user\Desktop\IP_team\MP3 Player\MP3 Player\bin\Debug\MP3 Player.pdb
+C:\Users\user\Desktop\IP_team\MP3 Player\MP3 Player\bin\Debug\Microsoft.Win32.Registry.dll
+C:\Users\user\Desktop\IP_team\MP3 Player\MP3 Player\bin\Debug\NAudio.Asio.dll
+C:\Users\user\Desktop\IP_team\MP3 Player\MP3 Player\bin\Debug\NAudio.Core.dll
+C:\Users\user\Desktop\IP_team\MP3 Player\MP3 Player\bin\Debug\NAudio.dll
+C:\Users\user\Desktop\IP_team\MP3 Player\MP3 Player\bin\Debug\NAudio.Midi.dll
+C:\Users\user\Desktop\IP_team\MP3 Player\MP3 Player\bin\Debug\NAudio.Wasapi.dll
+C:\Users\user\Desktop\IP_team\MP3 Player\MP3 Player\bin\Debug\NAudio.WinForms.dll
+C:\Users\user\Desktop\IP_team\MP3 Player\MP3 Player\bin\Debug\NAudio.WinMM.dll
+C:\Users\user\Desktop\IP_team\MP3 Player\MP3 Player\bin\Debug\Playlist.dll
+C:\Users\user\Desktop\IP_team\MP3 Player\MP3 Player\bin\Debug\Song.dll
+C:\Users\user\Desktop\IP_team\MP3 Player\MP3 Player\bin\Debug\System.Security.AccessControl.dll
+C:\Users\user\Desktop\IP_team\MP3 Player\MP3 Player\bin\Debug\System.Security.Principal.Windows.dll
+C:\Users\user\Desktop\IP_team\MP3 Player\MP3 Player\bin\Debug\Microsoft.Win32.Registry.xml
+C:\Users\user\Desktop\IP_team\MP3 Player\MP3 Player\bin\Debug\NAudio.xml
+C:\Users\user\Desktop\IP_team\MP3 Player\MP3 Player\bin\Debug\Playlist.pdb
+C:\Users\user\Desktop\IP_team\MP3 Player\MP3 Player\bin\Debug\Song.pdb
+C:\Users\user\Desktop\IP_team\MP3 Player\MP3 Player\bin\Debug\System.Security.AccessControl.xml
+C:\Users\user\Desktop\IP_team\MP3 Player\MP3 Player\bin\Debug\System.Security.Principal.Windows.xml
+C:\Users\user\Desktop\IP_team\MP3 Player\MP3 Player\bin\Debug\Interop.WMPLib.dll
+C:\Users\user\Desktop\IP_team\MP3 Player\MP3 Player\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\user\Desktop\IP_team\MP3 Player\MP3 Player\obj\Debug\MP3 Player.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\IP_team\MP3 Player\MP3 Player\obj\Debug\Interop.WMPLib.dll
+C:\Users\user\Desktop\IP_team\MP3 Player\MP3 Player\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\user\Desktop\IP_team\MP3 Player\MP3 Player\obj\Debug\MP3 Player.csproj.ResolveComReference.cache
+C:\Users\user\Desktop\IP_team\MP3 Player\MP3 Player\obj\Debug\MP3_Player.Form1.resources
+C:\Users\user\Desktop\IP_team\MP3 Player\MP3 Player\obj\Debug\MP3_Player.Properties.Resources.resources
+C:\Users\user\Desktop\IP_team\MP3 Player\MP3 Player\obj\Debug\MP3 Player.csproj.GenerateResource.cache
+C:\Users\user\Desktop\IP_team\MP3 Player\MP3 Player\obj\Debug\MP3 Player.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\IP_team\MP3 Player\MP3 Player\obj\Debug\MP3 Player.exe
+C:\Users\user\Desktop\IP_team\MP3 Player\MP3 Player\obj\Debug\MP3 Player.pdb
+D:\IP\FINALL\IP_team\MP3 Player\MP3 Player\bin\Debug\MP3 Player.exe.config
+D:\IP\FINALL\IP_team\MP3 Player\MP3 Player\bin\Debug\MP3 Player.exe
+D:\IP\FINALL\IP_team\MP3 Player\MP3 Player\bin\Debug\MP3 Player.pdb
+D:\IP\FINALL\IP_team\MP3 Player\MP3 Player\bin\Debug\Microsoft.Win32.Registry.dll
+D:\IP\FINALL\IP_team\MP3 Player\MP3 Player\bin\Debug\NAudio.Asio.dll
+D:\IP\FINALL\IP_team\MP3 Player\MP3 Player\bin\Debug\NAudio.Core.dll
+D:\IP\FINALL\IP_team\MP3 Player\MP3 Player\bin\Debug\NAudio.dll
+D:\IP\FINALL\IP_team\MP3 Player\MP3 Player\bin\Debug\NAudio.Midi.dll
+D:\IP\FINALL\IP_team\MP3 Player\MP3 Player\bin\Debug\NAudio.Wasapi.dll
+D:\IP\FINALL\IP_team\MP3 Player\MP3 Player\bin\Debug\NAudio.WinForms.dll
+D:\IP\FINALL\IP_team\MP3 Player\MP3 Player\bin\Debug\NAudio.WinMM.dll
+D:\IP\FINALL\IP_team\MP3 Player\MP3 Player\bin\Debug\System.Security.AccessControl.dll
+D:\IP\FINALL\IP_team\MP3 Player\MP3 Player\bin\Debug\System.Security.Principal.Windows.dll
+D:\IP\FINALL\IP_team\MP3 Player\MP3 Player\bin\Debug\Microsoft.Win32.Registry.xml
+D:\IP\FINALL\IP_team\MP3 Player\MP3 Player\bin\Debug\NAudio.xml
+D:\IP\FINALL\IP_team\MP3 Player\MP3 Player\bin\Debug\System.Security.AccessControl.xml
+D:\IP\FINALL\IP_team\MP3 Player\MP3 Player\bin\Debug\System.Security.Principal.Windows.xml
+D:\IP\FINALL\IP_team\MP3 Player\MP3 Player\bin\Debug\Interop.WMPLib.dll
+D:\IP\FINALL\IP_team\MP3 Player\MP3 Player\bin\Debug\AxInterop.WMPLib.dll
+D:\IP\FINALL\IP_team\MP3 Player\MP3 Player\obj\Debug\MP3 Player.csproj.AssemblyReference.cache
+D:\IP\FINALL\IP_team\MP3 Player\MP3 Player\obj\Debug\Interop.WMPLib.dll
+D:\IP\FINALL\IP_team\MP3 Player\MP3 Player\obj\Debug\AxInterop.WMPLib.dll
+D:\IP\FINALL\IP_team\MP3 Player\MP3 Player\obj\Debug\MP3 Player.csproj.ResolveComReference.cache
+D:\IP\FINALL\IP_team\MP3 Player\MP3 Player\obj\Debug\MP3_Player.Form1.resources
+D:\IP\FINALL\IP_team\MP3 Player\MP3 Player\obj\Debug\MP3_Player.Properties.Resources.resources
+D:\IP\FINALL\IP_team\MP3 Player\MP3 Player\obj\Debug\MP3 Player.csproj.GenerateResource.cache
+D:\IP\FINALL\IP_team\MP3 Player\MP3 Player\obj\Debug\MP3 Player.csproj.CoreCompileInputs.cache
+D:\IP\FINALL\IP_team\MP3 Player\MP3 Player\obj\Debug\MP3 Player.csproj.CopyComplete
+D:\IP\FINALL\IP_team\MP3 Player\MP3 Player\obj\Debug\MP3 Player.exe
+D:\IP\FINALL\IP_team\MP3 Player\MP3 Player\obj\Debug\MP3 Player.pdb
