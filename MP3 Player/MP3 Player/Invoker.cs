@@ -1,6 +1,6 @@
 ﻿/**************************************************************************
  *                                                                        *
- *  File:        Invoker.cs                                             v *
+ *  File:        Invoker.cs                                               *
  *  Copyright:   (c) 2023, Apostol Roxana-Maria                           *
  *  E-mail:      roxana-maria.apostol@student.tuiasi.ro                   *
  *  Description: Descrie realizarea sablonulului de proiectare COMANDA.   *

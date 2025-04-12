@@ -25,6 +25,7 @@ namespace Mp3_Player
     {
         private MusicManager _filesManager ;
         private MusicPlayer _musicPlayerManager;
+        private ICommand lyricsCommand;
         private List<Song> _songs;
         private string _currentLyrics;
         
@@ -187,7 +188,7 @@ namespace Mp3_Player
                     _currentLyrics = richTextBox.Text;
 
                     // Crearea comenzii și executarea acesteia
-                    ICommand lyricsCommand = new LyricsCommand(_currentLyrics, richTextBox);
+                    lyricsCommand = new LyricsCommand(_currentLyrics, richTextBox);
                     lyricsInvoker.ExecuteCommand(lyricsCommand, _currentLyrics);
                 }
                 else if (!string.IsNullOrEmpty(richTextBox.Text))
@@ -284,6 +285,10 @@ namespace Mp3_Player
             return nextIndex;
         }
 
+        public void SetVolume(float volume)
+        {
+            _musicPlayerManager.SetVolume(volume);
+        }
 
     }
 

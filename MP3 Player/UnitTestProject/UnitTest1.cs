@@ -130,8 +130,6 @@ namespace UnitTestProject
             Assert.IsTrue((playlists.GetPlaylistByName("Playlist de test 1") == null));
         }
 
-        ////////////////////////////////////////////
-        ///
         [TestMethod]
         public void Test_MusicManager_5_AddSongTo_Playlists_index1()
         {

@@ -24,9 +24,6 @@ namespace MP3_Player
 {
     public partial class Form1 : Form
     {
-        private MusicManager manager = new MusicManager();
-        private MusicPlayer musicPlayer = new MusicPlayer();
-        List<Song> songs = new List<Song>();
         private MP3PlayerControl Mp3PlayerCtrl = new MP3PlayerControl();
    
         //creez o instanță a clasei Invoker și o utilizez
@@ -37,7 +34,6 @@ namespace MP3_Player
         {
             InitializeComponent();
             addSongs.Enabled = false;
-
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -71,13 +67,13 @@ namespace MP3_Player
         {
             if (lyricsInvoker != null)
             {
-                lyricsInvoker.Undo();
-                richTextBox1.Text = lyricsInvoker.GetCurrentLyrics();
-
-                /*int currentIndexP = playList.SelectedIndex;
+                int currentIndexP = playList.SelectedIndex;
                 int currentIndexS = listBox.SelectedIndex;
                 listBox.SelectedIndex = Mp3PlayerCtrl.PrevSong(currentIndexP, currentIndexS);
-                buttonStopPlay.Text = Mp3PlayerCtrl.PlaySong();*/
+                buttonStopPlay.Text = Mp3PlayerCtrl.PlaySong();
+
+                lyricsInvoker.Undo();
+                richTextBox1.Text = lyricsInvoker.GetCurrentLyrics();
             }
         }
 
@@ -125,7 +121,7 @@ namespace MP3_Player
         {
             int volume = trackBar2.Value;
             float volumeNormalized = volume / 100f;
-            musicPlayer.SetVolume(volumeNormalized);
+            Mp3PlayerCtrl.SetVolume(volumeNormalized);
         }
 
         // Event pentru deschiderea ferestrei Help

@@ -1,7 +1,7 @@
 ﻿/**************************************************************************
  *                                                                        *
- *  File:        MusicPlayer.cs                                                *
- *  Copyright:   (c) 2023, Pîrvan Ines-Iuliana                           *
+ *  File:        MusicPlayer.cs                                           *
+ *  Copyright:   (c) 2023, Pîrvan Ines-Iuliana                            *
  *  E-mail:      ines-iuliana.ines@student.tuiasi.ro                      *
  *  Description: Descrie funcționalitatea de star/stop a melodiei.        *
  *                                                                        *
